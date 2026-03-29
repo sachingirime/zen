@@ -59,8 +59,10 @@ Inspired by Model Predictive Control, the dashboard forecasts your next 24 hours
    git clone [https://github.com/sachingirime/zen.git](https://github.com/sachingirime/zen.git)
    cd zen
    npm install
-
-
+   
+2. **Prerequisites**
+- Node.js (v16 or higher)
+- npm or yarn
 
 ## 👥 Team Members (Team 86)
 
@@ -74,3 +76,16 @@ Inspired by Model Predictive Control, the dashboard forecasts your next 24 hours
 Haghayegh, S., et al. (2020). Evaluating the relationship between Fitbit sleep data and self-reported mood. JMIR Formative Research.
 Mental Health America. (2024). The State of Mental Health in America.
 Prabhat S. Kunwar (Broad Institute of MIT and Harvard) - The Biology of Hope.
+
+## 🙌 Acknowledgments
+Special thanks to the Nepal Leaders Network team and mentors for organizing this hackathon and supporting innovation.
+
+## 📚 References
+
+- Haghayegh, S., Khoshnevis, S., Smolensky, M. H., Diller, K. R., & Castriotta, R. J. (2020). Evaluating the relationship between Fitbit sleep data and self-reported mood, sleep, and environmental contextual factors in healthy adults: Pilot observational cohort study. JMIR Formative Research, 4(9), e18086. https://doi.org/10.2196/18086
+
+- Mental Health America. (2024). The state of mental health in America 2024 https://mhanational.org/wp-content/uploads/2024/12/2024-State-of-Mental-Health-in-America-Report.pdf
+
+- Wang, X., et al. (2024). Using wearable devices and digital biomarkers to assess mental health and well-being: A systematic review. JMIR Formative Research, 8(1), e60759. https://formative.jmir.org/2024/1/e60759
+
+- 

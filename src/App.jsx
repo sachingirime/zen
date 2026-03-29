@@ -570,7 +570,7 @@ function Dashboard({raw,hasRealHR}){
       `}</style>
 
       {/* Header */}
-      <div style={{background:T.surf,padding:"clamp(24px, 4vw, 32px) 5%",boxShadow:T.shadow,position:"relative",zIndex:10}}>
+      <div style={{background:T.surf,boxShadow:T.shadow,position:"relative",zIndex:10}}>
         <div style={{maxWidth:1600,margin:"0 auto",display:"flex",alignItems:"center",
           justifyContent:"space-between",flexWrap:"wrap",gap:24}}>
           <div>
@@ -586,11 +586,7 @@ function Dashboard({raw,hasRealHR}){
                 Zen
               </div> */}
             </div>
-            
-            <div style={{fontSize:"clamp(24px, 4vw, 32px)",fontWeight:800,letterSpacing:"-.02em",color:T.text}}>Welcome to Your Wellness Space</div>
-            <div style={{fontSize:15,color:T.text3,marginTop:6,fontWeight:600}}>
-              {day.day}, {day.date} · {hasRealHR?"":"Estimated Patterns Active"}
-            </div>
+
           </div>
           <div style={{textAlign:"right",background:T.surf2,padding:"16px 28px",borderRadius:24,border:`1px solid ${T.border}`}}>
             <div style={{fontSize:13,color:T.text3,fontWeight:800,textTransform:"uppercase",letterSpacing:".05em"}}>Week Average</div>
@@ -600,7 +596,7 @@ function Dashboard({raw,hasRealHR}){
           </div>
         </div>
       </div>
-      <div style={{maxWidth:1600,margin:"0 auto",padding:"clamp(24px, 5vw, 40px) 5% 80px",display:"flex",flexDirection:"column",gap:32}}>
+      <div style={{maxWidth:1600,margin:"0 auto",padding:"clamp(24px, 5vw, 40px) 2% 80px",display:"flex",flexDirection:"column",gap:32}}>
 
         {/* Burnout Warning Banner */}
         {isBurnout&&(
@@ -613,6 +609,9 @@ function Dashboard({raw,hasRealHR}){
             </div>
           </div>
         )}
+
+        <div style={{fontSize:"clamp(24px, 4vw, 32px)",fontWeight:800,letterSpacing:"-.02em",color:T.text}}>Welcome to Your Wellness Space</div>
+
 
         {/* Peak State Banner */}
         {isPeakState&&(
