@@ -61,12 +61,14 @@ Inspired by Model Predictive Control, the dashboard forecasts your next 24 hours
    npm install
 
 
-# 👥 Team 86
-Sachin Giri 
-Apsara Thapa
-Abhinandini Shrestha
-Asmita Pathak
-Mentor: Sabin Shrestha (Director of Product, Equality Health)
+
+## 👥 Team Members (Team 86)
+
+- Sachin Giri
+- Apsara Thapa
+- Abhinandini Shrestha
+- Asmita Pathak
+- Mentor: Sabin Shrestha (Director of Product, Equality Health)
 
 ## 📚 References
 Haghayegh, S., et al. (2020). Evaluating the relationship between Fitbit sleep data and self-reported mood. JMIR Formative Research.
