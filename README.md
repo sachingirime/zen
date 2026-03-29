@@ -59,3 +59,16 @@ Inspired by Model Predictive Control, the dashboard forecasts your next 24 hours
    git clone [https://github.com/sachingirime/zen.git](https://github.com/sachingirime/zen.git)
    cd zen
    npm install
+
+
+# 👥 Team 86
+Sachin Giri 
+Apsara Thapa
+Abhinandini Shrestha
+Asmita Pathak
+Mentor: Sabin Shrestha (Director of Product, Equality Health)
+
+## 📚 References
+Haghayegh, S., et al. (2020). Evaluating the relationship between Fitbit sleep data and self-reported mood. JMIR Formative Research.
+Mental Health America. (2024). The State of Mental Health in America.
+Prabhat S. Kunwar (Broad Institute of MIT and Harvard) - The Biology of Hope.
