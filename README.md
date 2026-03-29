@@ -1,36 +1,61 @@
-# 🌿 Zen · Digital Twin Dashboard
-**Burnout Prevention & Peak State Tracking**
+# 🌿 Zen · Your Mental Digital Twin
+**Proactive Burnout Prevention through Biometric Synthesis & AI Feedback**
 
-![Zen Dashboard](https://img.shields.io/badge/Status-Live-success) ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=flat&logo=vite&logoColor=FFD62E) ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Zen Dashboard](https://img.shields.io/badge/Status-Live-success) ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=flat&logo=vite&logoColor=FFD62E) ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) ![Groq](https://img.shields.io/badge/AI-Groq--Llama3-orange)
 
 **🚀 Live Demo:** [https://zen-hackathon.vercel.app/](https://zen-hackathon.vercel.app/)
 
-Zen is a proactive wellness and productivity dashboard designed to act as your "Digital Twin." By synthesizing biometric data (sleep, heart rate, physical activity) with daily work schedules, Zen predicts burnout risk before it happens and helps you replicate your peak performance states.
+---
 
-## ⚠️ The Problem
-In modern work environments, burnout is often invisible until it reaches a breaking point. Professionals struggle to understand how their daily habits, meeting loads, and sleep quality actively impact their cognitive baseline. Traditional wellness apps isolate health data from work data, failing to provide actionable, holistic context.
+## 📌 Problem Statement: The Invisible Cliff
+Burnout isn't just "being tired." It exists in complex forms—overload, under-challenged, and neglect. Most individuals mistake early warning signs for normal fatigue, continuing unhealthy routines until symptoms escalate into serious mental and physical crises. By the time someone seeks help, the intervention is **reactive**. We need a **proactive** solution.
 
-## 💡 Our Solution (Innovation & UX)
-Zen bridges the gap between biometric wearables and the calendar. It processes massive arrays of daily physical data and translates it into a single, intuitive "Wellness Score." 
-* **Proactive Interventions:** Instead of generic advice, Zen flags high burnout risks based on actual resting heart rate and sleep efficiency data.
-* **Warm AI Companion:** Integrated with the Llama 3 API via Groq, Zen features a deeply empathetic AI check-in system that adjusts its tone based on the user's daily biometric score—offering gentle support on low-energy days and celebrating wins on peak days.
+## 💡 The Solution: A Mental Digital Twin
+Zen is a digital twin–based mental fitness application. It creates a personalized virtual replica of your mental well-being by continuously monitoring:
+*   **Physiological Signals:** Heart Rate Variability (HRV), Resting Heart Rate (RHR), and Sleep Patterns.
+*   **Behavioral Indicators:** Daily activity, steps, and sedentary levels.
+*   **Environmental Context:** Your actual work schedule, meeting density, and deep-work sessions.
 
-## ⚙️ Technical Complexity & Features
-* **Massive Data Parsing:** Utilizes `PapaParse` to seamlessly ingest and process hundreds of thousands of rows of local CSV biometric data (Heart rate, steps, sleep, calories) entirely client-side.
-* **Predictive Modeling:** Calculates a 10-point wellness score using a weighted algorithm combining RMSSD (HRV), resting heart rate, sleep efficiency, and daily schedule stress.
-* **Interactive Data Visualization:** Implements `Recharts` for dynamic, responsive Area and Line charts displaying weekly trends and 24-hour heart rate rhythms.
-* **Low-Latency LLM Integration:** Uses the Groq API for instantaneous, context-aware AI conversations.
-
-## 📈 Business Impact & Feasibility
-Zen is highly feasible as a B2B SaaS integration for corporate wellness or a B2C application for high-performers. By preventing burnout, companies can drastically reduce employee churn, lower healthcare costs, and foster a sustainable culture of peak productivity.
+By synthesizing Fitbit/wearable data with your lived experience, Zen identifies when a "mental crash" is imminent and provides early intervention before burnout becomes chronic.
 
 ---
 
-## 🚀 Setup & Installation Instructions
+## 🛠 Features & Implementation
 
-To run Zen locally on your machine, follow these steps:
+### 1. Fatigue Detection Engine (The Core)
+Our algorithm processes massive arrays of data (via `PapaParse`) to generate a live **Wellness Score**. 
+*   **Biometric Input:** Real-time analysis of Sleep Efficiency, RHR, and RMSSD (HRV).
+*   **Schedule Integration:** Unlike standard trackers, Zen integrates your **Calendar**. It "knows" when you are in a high-stress meeting vs. deep work, adjusting your recovery needs accordingly.
 
-### 1. Clone the repository
-```bash
-git clone [https://github.com/sachingirime/zen.git](https://github.com/sachingirime/zen.git)
-cd zen
+### 2. Warm AI Check-ins (Closing the Feedback Loop)
+Zen doesn't just show charts; it talks to you. Using the **Groq Llama-3 API**, our AI agent acts as a nurturing companion:
+*   **Celebration:** When metrics improve, Zen identifies the lifestyle shifts that caused the boost.
+*   **Gentle Inquiry:** When indicators dip, it offers a safe space to pinpoint stressors (e.g., *"Why are you worried today?"*), ensuring the digital twin stays calibrated to your reality.
+
+### 3. Predictive Forecasting (MPC)
+Inspired by Model Predictive Control, the dashboard forecasts your next 24 hours based on the last 3 days of recovery patterns, allowing you to adjust your Sunday plans before Monday hits.
+
+---
+
+## 🔬 Why Metrics Matter
+*   **The Sleep-Depression Link:** Up to 90% of patients with major depressive disorder experience sleep disturbances. Zen focuses on **Sleep Quality** and **Fatigue** as the primary leading indicators of mental health decline.
+*   **Early Intervention:** We target the "biology of hope." Actions taken during the fatigue stage prevent the move toward depersonalization and despair.
+
+---
+
+## 🏗 Tech Stack
+*   **Frontend:** React.js + Vite (optimized for speed and low-latency).
+*   **Data Processing:** `PapaParse` for client-side CSV ingestion of Fitbit datasets.
+*   **Visualizations:** `Recharts` for dynamic heart rate and wellness trend analysis.
+*   **Intelligence:** Groq API (Llama 3.1 8B) for compassionate, real-time feedback.
+*   **Deployment:** Vercel (Continuous Integration/Deployment).
+
+---
+
+## 🚀 Setup & Installation
+
+1. **Clone & Install:**
+   ```bash
+   git clone [https://github.com/sachingirime/zen.git](https://github.com/sachingirime/zen.git)
+   cd zen
+   npm install
