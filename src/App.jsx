@@ -1,5 +1,3 @@
-
-
 /*
  ╔══════════════════════════════════════════════════════════════╗
  ║         Zen · Digital Twin Dashboard                         ║
@@ -100,32 +98,15 @@ const slbl  = s=>s>=7.5?"Peak State":s>=5.5?"Room to Recharge":"Needs Some Care"
 const strc  = w=>({none:T.emerald,low:T.emerald,medium:T.amber,high:T.red})[w]??T.amber;
 
 // ─── LOADING SCREEN ───────────────────────────────────────────────────────────
-function LoadingScreen({progress,statuses}){
+function LoadingScreen({progress}){
   return(
-    <div style={{minHeight:"100vh",background:"linear-gradient(160deg, #f3f4f8 0%, #e2e8f0 100%)",display:"flex",alignItems:"center",
-      justifyContent:"center",fontFamily:"'Inter',system-ui,sans-serif",padding:24}}>
-      <div style={{width:"100%",maxWidth:540, background: T.surf, padding: "clamp(24px, 5vw, 48px)", borderRadius: 32, boxShadow: T.shadow}}>
-        <div style={{fontSize:48,marginBottom:16}}>🌿</div>
-        <div style={{fontSize:"clamp(24px, 5vw, 32px)",fontWeight:800,color:T.text,marginBottom:8,letterSpacing:"-.02em"}}>Waking up Zen...</div>
-        <div style={{fontSize:16,color:T.text2,marginBottom:32,lineHeight:1.7}}>
-          Taking a moment to gently sync your wellness data. 
+    <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",
+      justifyContent:"center",fontFamily:"'Inter',system-ui,sans-serif"}}>
+      <div style={{textAlign: "center"}}>
+        <div style={{fontSize:20,fontWeight:800,color:T.text,marginBottom:16,letterSpacing:"-.02em"}}>Loading Dashboard...</div>
+        <div style={{width: 240, height:6,background:T.border,borderRadius:8,overflow:"hidden", margin: "0 auto"}}>
+          <div style={{height:"100%",background:`linear-gradient(90deg, ${T.accent}, ${T.cyan})`,borderRadius:8,width:`${progress}%`,transition:"width .4s ease"}}/>
         </div>
-        <div style={{height:8,background:T.border,borderRadius:8,marginBottom:32,overflow:"hidden"}}>
-          <div style={{height:"100%",background:`linear-gradient(90deg, ${T.accent}, ${T.emerald})`,borderRadius:8,width:`${progress}%`,transition:"width .4s ease"}}/>
-        </div>
-        {CSV_FILES.map(f=>{
-          const s=statuses[f.key];
-          const col=s?.startsWith("✓")?T.emerald:s?.startsWith("✗")?T.red:s?T.amber:T.text3;
-          return(
-            <div key={f.key} style={{display:"flex",justifyContent:"space-between",alignItems:"center",
-              background:T.surf2,borderRadius:16,padding:"16px 24px",marginBottom:12}}>
-              <div style={{overflow:"hidden",textOverflow:"ellipsis"}}>
-                <div style={{fontSize:14,fontWeight:700,color:T.text}}>{f.label}</div>
-              </div>
-              <div style={{fontSize:13,color:col,fontWeight:700, whiteSpace:"nowrap", marginLeft:10}}>{s??"Waiting…"}</div>
-            </div>
-          );
-        })}
       </div>
     </div>
   );
